@@ -1,0 +1,117 @@
+#morse-code-input-overlay {
+	z-index: 2147483647;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #1e1f31;
+}
+	#morse-code-input-overlay .overlay-close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		overflow: hidden;
+		border: none;
+		background: none;
+		color: white;
+		font-size: 20pt;
+	}
+
+#morse-code-input-header {
+	position: absolute;
+	padding-top: 10px;
+	background-color: #111226;
+	top: 0;
+	height: 100px;
+	width: 100%;
+	font-family: monospace;
+	color: white;
+	text-align: center;
+}
+	#morse-code-input-header > div {
+		font-size: 250%;
+	}
+
+#morse-code-input-div {
+	position: absolute;
+	background: #373852;
+	border: 1px solid #111226;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+	margin-left: -125px;
+}
+	#morse-code-input-div > div.hint {
+		color: #5d5e7d;
+		font-family: monospace;
+		font-size: 120%;
+		text-align: center;
+		margin-top: 100px;
+		position: absolute;
+		width: 100%;
+		user-select: none
+	}
+	#morse-code-input-div .circle-small {
+		display: none;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background: #d53c51;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+		margin-top: 70px;
+		margin-left: 70px;
+	}
+	#morse-code-input-div .circle-big {
+		display: none;
+		position: absolute;
+		width: 140px;
+		height: 140px;
+		background: #b0263d;
+		-moz-border-radius: 70px;
+		-webkit-border-radius: 70px;
+		border-radius: 70px;
+		margin-top: 50px;
+		margin-left: 50px;
+	}
+	#morse-code-input-div .input-dots {
+		width: 100%;
+		bottom: 10px;
+		position: absolute;
+		text-align: center;
+		font-size: 150%;
+		font-family: monospace;
+		color: white;
+		user-select: none
+	}
+
+#morse-code-input-text {
+	position: absolute;
+	width: 100%;
+	top: 25%;
+}
+	#morse-code-input-text > div {
+		width: 90%;
+		background: #111226;
+		border: 1px solid #34343e;
+		min-height: 50px;
+		margin: 0 auto;
+		text-align: center;
+		color: white;
+		font-size: 200%;
+		padding-top: 5px;
+		font-family: monospace;
+	}
+
+@media (max-width: 481px) {
+	#morse-code-input-header > div {
+		font-size: 150%;
+	}
+	#morse-code-input-overlay .overlay-close {
+		right: 10px;
+		top: 10px;
+	}
+}
