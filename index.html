@@ -5,25 +5,59 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Title</title>
+	<title>jQuery Morse Code Input</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="jquery.morseCodeInput.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="morse-code-input.css">
+	<link rel="stylesheet" href="github-io.css">
 </head>
 <body>
 	<div class="container">
-		<form>
-			<label for="test">Test </label><input type="text" id="test" class="form-control">
+
+		<div class="header clearfix">
+			<h3 class="text-muted pull-left">jQuery Morse Code Input</h3>
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation" class="active"><a href="https://shmakov.github.io/jQuery-Morse-Code-Input/">Demo</a></li>
+					<li role="presentation"><a href="https://github.com/Shmakov/jQuery-Morse-Code-Input">GitHub Source Code</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="jumbotron">
+			<h1>Morse Code Input Demo</h1>
+			<p>Click/Tap on any form input field below</p>
+		</div>
+
+		<form id="demo-form" onsubmit="return false;">
+			<div class="form-group">
+				<label for="first_name">Your Name</label>
+				<input type="text" id="first_name" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label for="feedback">Tell us about your experience</label>
+				<textarea id="feedback" class="form-control"></textarea>
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
 		</form>
 	</div>
 	<script>
 	$(document).ready(function(){
-		$('#test').morseCodeInput();
-		$('#test2').morseCodeInput();
-		$('#test3').morseCodeInput();
+		$("#first_name").morseCodeInput();
+		$("#email").morseCodeInput();
+		$("#feedback").morseCodeInput();
 	});
 	</script>
 </body>
